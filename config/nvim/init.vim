@@ -28,6 +28,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'morhetz/gruvbox'
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
+Plug 'neovim/nvim-lspconfig'
 
 " vim-scripts repos
 "Plug 'vim-scripts/L9'
@@ -134,3 +135,7 @@ endif
 " Custom commands
 command PBCFullPath execute "!echo %:p | pbcopy"
 command PBCRelativePath execute "!echo % | pbcopy"
+
+" LSP config
+lua require('lspconfig').pyright.setup{}
+" End LSP config
