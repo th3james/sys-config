@@ -4,10 +4,6 @@
 set -g EDITOR "nvim"
 git config --global core.editor nvim
 
-if is_installed direnv
-  direnv hook fish | source
-end
-
 # Homebrew path
 set -g fish_user_paths (get_homebrew_path) $fish_user_paths
 
@@ -21,6 +17,11 @@ if is_installed asdf
 else
   echo "No asdf installed"
 end
+
+if is_installed direnv
+  direnv hook fish | source
+end
+
 
 # Use Docker Buildkit
 set -g DOCKER_BUILDKIT 1
