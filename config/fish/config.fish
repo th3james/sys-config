@@ -15,7 +15,12 @@ set -g fish_user_paths (get_homebrew_path) $fish_user_paths
 # set -g fish_user_paths "$HOME/.gem/ruby/2.6.0/bin" $fish_user_paths
 
 # asdf
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+
+if is_installed asdf
+  source (get_asdf_lib_path)/asdf/libexec/asdf.fish
+else
+  echo "No asdf installed"
+end
 
 # Use Docker Buildkit
 set -g DOCKER_BUILDKIT 1
