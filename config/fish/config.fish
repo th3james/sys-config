@@ -7,11 +7,7 @@ git config --global core.editor nvim
 # direnv hook fish | source
 
 # Homebrew path
-## Apple Silicon
-set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
-
-## Intel
-# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths (get_homebrew_path) $fish_user_paths
 
 # set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 # set -g fish_user_paths "$HOME/.gem/ruby/2.6.0/bin" $fish_user_paths
