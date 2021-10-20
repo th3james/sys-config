@@ -4,7 +4,9 @@
 set -g EDITOR "nvim"
 git config --global core.editor nvim
 
-# direnv hook fish | source
+if is_installed direnv
+  direnv hook fish | source
+end
 
 # Homebrew path
 set -g fish_user_paths (get_homebrew_path) $fish_user_paths
