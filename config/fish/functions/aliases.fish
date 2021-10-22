@@ -14,3 +14,6 @@ abbr -a -g gfm 'git fetch; git merge --ff-only'
 abbr -a -g gfr 'git fetch; git rebase'
 abbr -a -g gpo 'git push origin'
 abbr -a -g glp 'git log --graph --pretty=oneline --abbrev-commit'
+
+# Kubectl #
+abbr -a -g kcnls 'kubectl get namespaces'
