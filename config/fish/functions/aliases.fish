@@ -6,7 +6,7 @@ abbr -a -g tmux env TERM=screen-256color tmux
 # Git #
 abbr -a -g ga git add
 abbr -a -g gst git status
-abbr -a -g gcm git checkout master
+abbr -a -g gcm 'git checkout (gmom)'
 abbr -a -g gco git checkout
 abbr -a -g gd git diff
 abbr -a -g gc git commit -v
