@@ -1,13 +1,42 @@
-# VIM
-*.swp
-*.swo
-*.swn
-*.un~
+## macOS ###
+# General
+.DS_Store
+
+# Files that might appear in the root of a volume
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated ctag files
+tags
+# Persistent undo
+[._]*.un~
+
 vim/plugged
 
-# macOS
-.DS_Store
-.DS_Store?
+# asdf
+.tool-versions
 
 # Nova
 .nova/
