@@ -19,7 +19,7 @@ else
 end
 
 # Use ripgrep with fzf
-set -gx FZF_DEFAULT_COMMAND "rg --files --hidden"
+set -gx FZF_DEFAULT_COMMAND "rg --files --hidden -g \"!.git/\""
 
 
 if is_installed direnv
