@@ -1,11 +1,11 @@
 # Load aliases
 . "$HOME/.config/fish/functions/aliases.fish"
 
-set -g EDITOR "nvim"
+set -gx EDITOR "nvim"
 git config --global core.editor nvim
 
 # Homebrew path
-set -g fish_user_paths (get_homebrew_path) $fish_user_paths
+set -gx fish_user_paths (get_homebrew_path) $fish_user_paths
 
 # set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 # set -g fish_user_paths "$HOME/.gem/ruby/2.6.0/bin" $fish_user_paths
@@ -17,6 +17,10 @@ if is_installed asdf
 else
   echo "No asdf installed"
 end
+
+# Use ripgrep with fzf
+set -gx FZF_DEFAULT_COMMAND "rg --files --hidden"
+
 
 if is_installed direnv
   direnv hook fish | source
