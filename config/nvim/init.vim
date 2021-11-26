@@ -6,7 +6,6 @@ call plug#begin('~/.vim/plugged')
 " Plug 'tpope/vim-rails'
 
 "Plug 'ervandew/supertab'
-"Plug 'kien/ctrlp.vim'
 set rtp+="/opt/homebrew/bin/fzf"
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 "Plug 'thoughtbot/vim-rspec'
@@ -78,6 +77,8 @@ set winwidth=84
 nnoremap <C-p> :Files<CR>
 
 let g:fzf_layout = { 'down': '~40%' }
+
+nnoremap <C-s> :Rg<CR>
 
 " vim-test setup
 " nmap <silent> <leader>t :TestNearest<CR>
