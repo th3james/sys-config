@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plug 'tpope/vim-rails'
 
-"Plug 'ervandew/supertab'
+Plug 'ervandew/supertab'
 set rtp+="/opt/homebrew/bin/fzf"
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 "Plug 'thoughtbot/vim-rspec'
