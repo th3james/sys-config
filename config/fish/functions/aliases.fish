@@ -19,3 +19,6 @@ abbr -a -g glp 'git log --graph --pretty=oneline --abbrev-commit'
 # Kubectl #
 abbr -a -g kcnls 'kubectl get namespaces'
 abbr -a -g kcuc 'kubectl config use-context'
+
+# Ripgrep
+abbr -a -g rgf 'rg --files -g'
