@@ -19,7 +19,6 @@ Plug 'tpope/vim-fugitive'
 "Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
 "Plug 'christoomey/vim-tmux-navigator'
-"Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
 "Plug 'leafgarland/typescript-vim'
 Plug 'chr4/nginx.vim'
@@ -28,6 +27,7 @@ Plug 'morhetz/gruvbox'
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 Plug 'neovim/nvim-lspconfig'
+Plug 'fatih/vim-go'
 
 " vim-scripts repos
 "Plug 'vim-scripts/L9'
@@ -69,6 +69,10 @@ runtime! macros/matchit.vim
 
 set expandtab
 set ai sw=2 sts=2 et
+
+" Language specific settings
+" Go
+autocmd FileType go setlocal noet ts=4 sw=4 sts=4
 
 " Force windows to be 80 char wide
 set numberwidth=4
@@ -139,4 +143,5 @@ command PBCRelativePath execute "!echo % | pbcopy"
 
 " LSP config
 lua require('lspconfig').pyright.setup{}
+lua require('lspconfig').gopls.setup{}
 " End LSP config
