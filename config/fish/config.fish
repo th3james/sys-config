@@ -26,6 +26,9 @@ if is_installed direnv
   direnv hook fish | source
 end
 
+if is_installed zoxide
+  zoxide init fish | source
+end
 
 # Use Docker Buildkit
 set -g DOCKER_BUILDKIT 1
