@@ -13,7 +13,7 @@ set -gx fish_user_paths (get_homebrew_path) $fish_user_paths
 # asdf
 
 if is_installed asdf
-  source (get_asdf_lib_path)/asdf/libexec/asdf.fish
+  source (brew --prefix asdf)/libexec/asdf.fish
 else
   echo "No asdf installed"
 end
