@@ -144,4 +144,5 @@ command PBCRelativePath execute "!echo % | pbcopy"
 " LSP config
 lua require('lspconfig').pyright.setup{}
 lua require('lspconfig').gopls.setup{}
+lua require('lspconfig').tsserver.setup{}
 " End LSP config
