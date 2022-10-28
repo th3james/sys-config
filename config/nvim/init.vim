@@ -3,18 +3,10 @@ filetype off                   " required!
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'tpope/vim-rails'
 
-Plug 'ervandew/supertab'
 set rtp+="/opt/homebrew/bin/fzf"
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
-"Plug 'thoughtbot/vim-rspec'
 "Plug 'rust-lang/rust.vim'
-"Plug 'keith/swift.vim'
-"Plug 'yodiaditya/vim-pydjango'
-"Plug 'nvie/vim-flake8'
-"Plug 'janko-m/vim-test'
-"Plug 'benmills/vimux'
 Plug 'tpope/vim-fugitive'
 "Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
@@ -78,20 +70,10 @@ autocmd FileType go setlocal noet ts=4 sw=4 sts=4
 set numberwidth=4
 set winwidth=84
 
-nnoremap <C-p> :Files<CR>
+nnoremap <Space>f :Files<CR>
+nnoremap <Space>s :Rg<CR>
 
 let g:fzf_layout = { 'down': '~40%' }
-
-nnoremap <C-s> :Rg<CR>
-
-" vim-test setup
-" nmap <silent> <leader>t :TestNearest<CR>
-" nmap <silent> <leader>T :TestFile<CR>
-" nmap <silent> <leader>a :TestSuite<CR>
-" nmap <silent> <leader>l :TestLast<CR>
-" nmap <silent> <leader>g :TestVisit<CR>
-
-"let test#strategy = "vimux"
 
 " Example docker transform
 "function! DockerTransform(cmd) abort
@@ -144,6 +126,6 @@ command PBCRelativePath execute "!echo % | pbcopy"
 " LSP config
 lua require('lspconfig').pyright.setup{}
 lua require('lspconfig').gopls.setup{}
-lua require('lspconfig').tsserver.setup{}
+"lua require('lspconfig').tsserver.setup{}
 lua require('lspconfig').rls.setup{}
 " End LSP config
