@@ -87,8 +87,8 @@ let g:fzf_layout = { 'down': '~40%' }
 
 " jk instead of esc
 imap jk <Esc>
-" tarmak 1 of above
-imap ne <Esc>
+" tarmak alternative
+imap hh <Esc>
 
 set statusline=%f%<\:%l\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
