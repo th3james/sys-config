@@ -71,6 +71,7 @@ set numberwidth=4
 set winwidth=84
 
 nnoremap <Space>f :Files<CR>
+nnoremap <Space>d :lua vim.lsp.buf.definition()<CR>
 nnoremap <Space>s :Rg<CR>
 
 let g:fzf_layout = { 'down': '~40%' }
