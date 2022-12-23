@@ -37,6 +37,7 @@ if null_ls then
 					return get_npx_path("eslint")
 				end,
 			}),
+			null_ls.builtins.diagnostics.ruff,
 		},
 	})
 else
