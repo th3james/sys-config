@@ -1,29 +1,10 @@
+require "plugins"
+
 vim.cmd([[
 set nocompatible          " We're running Vim, not Vi!
 filetype off                   " required!
 
-call plug#begin('~/.vim/plugged')
-
-
 set rtp+="/opt/homebrew/bin/fzf"
-Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
-"Plug 'rust-lang/rust.vim'
-Plug 'tpope/vim-fugitive'
-"Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-rhubarb'
-"Plug 'christoomey/vim-tmux-navigator'
-Plug 'hashivim/vim-terraform'
-"Plug 'leafgarland/typescript-vim'
-Plug 'chr4/nginx.vim'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'morhetz/gruvbox'
-Plug 'cespare/vim-toml'
-Plug 'dag/vim-fish'
-Plug 'neovim/nvim-lspconfig'
-Plug 'fatih/vim-go'
-Plug 'github/copilot.vim'
-
-call plug#end()
 
 let g:vim_markdown_folding_disabled=1
 
