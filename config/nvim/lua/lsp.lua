@@ -47,6 +47,11 @@ if null_ls then
 				end,
 			}),
 			null_ls.builtins.diagnostics.ruff,
+			null_ls.builtins.diagnostics.mypy.with({
+				command = function(params)
+					return get_venv_path("mypy")
+				end,
+			}),
 		},
 	})
 else
