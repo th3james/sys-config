@@ -19,6 +19,18 @@ return require('packer').startup(function(use)
 
   use 'morhetz/gruvbox'
 
+  use 'github/copilot.vim'
+
+  use {
+    "nvim-telescope/telescope.nvim", tag = '0.1.0',
+    requires = {
+      "nvim-lua/plenary.nvim",
+
+      { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+    },
+  }
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
@@ -44,5 +56,4 @@ end)
 -- Plug 'dag/vim-fish'
 -- Plug 'neovim/nvim-lspconfig'
 -- Plug 'fatih/vim-go'
--- Plug 'github/copilot.vim'
 

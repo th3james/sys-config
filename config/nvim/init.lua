@@ -1,5 +1,14 @@
 require "plugins"
 
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<Space>ff', builtin.find_files, {})
+vim.keymap.set('n', '<Space>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<Space>fb', builtin.buffers, {})
+vim.keymap.set('n', '<Space>fh', builtin.help_tags, {})
+
+-- TODO untested
+vim.keymap.set('n', '<Space>d', vim.lsp.buf.definition, {})
+
 vim.cmd([[
 set nocompatible          " We're running Vim, not Vi!
 filetype off                   " required!
@@ -50,9 +59,6 @@ autocmd FileType go setlocal noet ts=4 sw=4 sts=4
 set numberwidth=4
 set winwidth=84
 
-nnoremap <Space>f :Files<CR>
-nnoremap <Space>d :lua vim.lsp.buf.definition()<CR>
-nnoremap <Space>s :Rg<CR>
 
 let g:fzf_layout = { 'down': '~40%' }
 
