@@ -1,3 +1,4 @@
+vim.cmd([[
 set nocompatible          " We're running Vim, not Vi!
 filetype off                   " required!
 
@@ -20,9 +21,7 @@ Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 Plug 'neovim/nvim-lspconfig'
 Plug 'fatih/vim-go'
-
-" vim-scripts repos
-"Plug 'vim-scripts/L9'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -132,3 +131,6 @@ lua require('lspconfig').gopls.setup{}
 "lua require('lspconfig').tsserver.setup{}
 lua require('lspconfig').rls.setup{}
 " End LSP config
+
+let g:copilot_node_command = "~/.asdf/installs/nodejs/17.9.1/bin/node"
+]])
