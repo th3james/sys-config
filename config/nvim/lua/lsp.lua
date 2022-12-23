@@ -7,6 +7,14 @@ end
 
 local null_ls = require("null-ls")
 
+local trim_whitespace = function(str)
+	return str:gsub("^%s*(.-)%s*$", "%1")
+end
+
+local get_npx_path = function(executable_name)
+	return trim_whitespace(vim.fn.system("npx which " .. executable_name))
+end
+
 if null_ls then
 	null_ls.setup({
 		sources = {
@@ -26,11 +34,7 @@ if null_ls then
 			}),
 			null_ls.builtins.diagnostics.eslint.with({
 				command = function(params)
-					local handle = io.popen("npx which eslint")
-					local result = handle:read("*a") -- read the output of the command
-					handle:close()
-					result = result:gsub("%s+", "") -- remove trailing newline
-					return result
+					return get_npx_path("eslint")
 				end,
 			}),
 		},
