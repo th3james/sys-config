@@ -13,9 +13,6 @@ vim.keymap.set("n", "<Space>l", function()
 end, {})
 
 vim.cmd([[
-set nocompatible          " We're running Vim, not Vi!
-filetype off                   " required!
-
 set rtp+="/opt/homebrew/bin/fzf"
 
 let g:vim_markdown_folding_disabled=1
