@@ -12,8 +12,9 @@ vim.keymap.set("n", "<Space>l", function()
 	vim.lsp.buf.format({ timeout_ms = 10000 })
 end, {})
 
+vim.opt.rtp:append("/opt/homebrew/bin/fzf")
+
 vim.cmd([[
-set rtp+="/opt/homebrew/bin/fzf"
 
 let g:vim_markdown_folding_disabled=1
 
