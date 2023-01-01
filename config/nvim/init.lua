@@ -17,8 +17,6 @@ set rtp+="/opt/homebrew/bin/fzf"
 
 let g:vim_markdown_folding_disabled=1
 
-filetype plugin indent on     " required!
-
 " UI stuff
 set t_Co=256
 
