@@ -8,7 +8,9 @@ vim.keymap.set("n", "<Space>fb", builtin.buffers, {})
 vim.keymap.set("n", "<Space>fh", builtin.help_tags, {})
 
 vim.keymap.set("n", "<Space>d", vim.lsp.buf.definition, {})
-vim.keymap.set("n", "<Space>l", vim.lsp.buf.format, {})
+vim.keymap.set("n", "<Space>l", function()
+	vim.lsp.buf.format({ timeout_ms = 10000 })
+end, {})
 
 vim.cmd([[
 set nocompatible          " We're running Vim, not Vi!

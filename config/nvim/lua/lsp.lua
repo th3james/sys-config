@@ -41,6 +41,11 @@ if null_ls then
 					return get_npx_path("eslint")
 				end,
 			}),
+			null_ls.builtins.formatting.eslint.with({
+				command = function(params)
+					return get_npx_path("eslint")
+				end,
+			}),
 			null_ls.builtins.formatting.black.with({
 				command = function(params)
 					return get_venv_path("black")
