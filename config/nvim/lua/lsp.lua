@@ -7,16 +7,32 @@ end
 
 local null_ls = require("null-ls")
 
+local log_warning = function(msg)
+	vim.notify("[th3james config] " .. msg, vim.log.levels.WARN)
+end
+
 local trim_whitespace = function(str)
 	return str:gsub("^%s*(.-)%s*$", "%1")
 end
 
 local get_npx_path = function(executable_name)
-	return trim_whitespace(vim.fn.system("npx which " .. executable_name))
+	local npx_path = vim.fn.system("npx which " .. executable_name)
+	if npx_path == "" then
+		log_warning("Could not find " .. executable_name .. " in npx, falling back to global")
+		return executable_name
+	else
+		return trim_whitespace(npx_path)
+	end
 end
 
 local get_venv_path = function(executable_name)
-	return trim_whitespace(vim.fn.system("veex which " .. executable_name))
+	local executable_path = vim.fn.system("veex which " .. executable_name)
+	if executable_path == "" then
+		log_warning("Could not find " .. executable_name .. " in virtual environment, will try system path")
+		return executable_name
+	else
+		return trim_whitespace(executable_path)
+	end
 end
 
 if null_ls then
