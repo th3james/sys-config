@@ -16,7 +16,6 @@ vim.opt.rtp:append("/opt/homebrew/bin/fzf")
 
 vim.cmd([[
 
-color default
 colorscheme gruvbox
 set background=dark       " Assume a dark background
 
