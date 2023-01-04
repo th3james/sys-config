@@ -16,12 +16,6 @@ vim.opt.rtp:append("/opt/homebrew/bin/fzf")
 
 vim.cmd([[
 
-let g:vim_markdown_folding_disabled=1
-
-" UI stuff
-set t_Co=256
-
-syntax on                 " Enable syntax highlighting
 color default
 colorscheme gruvbox
 set background=dark       " Assume a dark background
