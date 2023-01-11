@@ -37,17 +37,16 @@ vim.o.ignorecase = true -- case insensitive search
 vim.o.smartcase = true -- case sensitive when uc present
 vim.o.gdefault = true -- the /g flag on :s substitutions by default
 
-vim.o.undofile = true              -- Persistent undo (across files)
+vim.o.undofile = true -- Persistent undo (across files)
+
+vim.o.numberwidth = 4 -- Always show 4 digits for line numbers
+vim.o.winwidth = 84 -- Force windows to be 80 char wide
 
 vim.cmd([[
 
 " Language specific settings
 " Go
 autocmd FileType go setlocal noet ts=4 sw=4 sts=4
-
-" Force windows to be 80 char wide
-set numberwidth=4
-set winwidth=84
 
 let g:fzf_layout = { 'down': '~40%' }
 
