@@ -22,20 +22,24 @@ vim.o.linespace = 0 -- No extra spaces between rows
 vim.o.wildmode = "list:longest,full" -- Command-line completion mode
 vim.o.whichwrap = "b,s,h,l,<,>,[,]" -- backspace and cursor keys wrap to
 
+vim.o.scrolljump = 5 -- lines to scroll when cursor leaves screen
+vim.o.scrolloff = 3 -- minimum lines to keep above and below cursor
+
+vim.o.nu = true -- Line numbers on
+
+vim.o.expandtab = true -- Spaces instead of tabs
+vim.o.tabstop = 2 -- Number of spaces per tab
+vim.o.shiftwidth = 2 -- Number of spaces per tab
+vim.o.softtabstop = 2 -- Number of spaces per tab
+
+vim.o.showmatch = true -- show matching brackets/parenthesis
+vim.o.ignorecase = true -- case insensitive search
+vim.o.smartcase = true -- case sensitive when uc present
+vim.o.gdefault = true -- the /g flag on :s substitutions by default
+
+vim.o.undofile = true              -- Persistent undo (across files)
+
 vim.cmd([[
-
-set nu                                " Line numbers on
-set showmatch                         " show matching brackets/parenthesis
-set ignorecase			" case insensitive search
-set smartcase                         " case sensitive when uc present
-set scrolljump=5                      " lines to scroll when cursor leaves screen
-set scrolloff=3                       " minimum lines to keep above and below cursor
-set gdefault                          " the /g flag on :s substitutions by default
-
-set undofile              " Persistent undo (across files)
-
-set expandtab
-set ai sw=2 sts=2 et
 
 " Language specific settings
 " Go
