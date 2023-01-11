@@ -14,10 +14,11 @@ end, {})
 
 vim.opt.rtp:append("/opt/homebrew/bin/fzf")
 
-vim.cmd([[
+vim.cmd("colorscheme gruvbox")
 
-colorscheme gruvbox
-set background=dark       " Assume a dark background
+vim.o.background = "dark" -- assume dark background
+
+vim.cmd([[
 
 set backspace=indent,eol,start	" backspace for dummys
 set linespace=0		        " No extra spaces between rows
