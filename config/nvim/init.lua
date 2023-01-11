@@ -16,19 +16,13 @@ vim.opt.rtp:append("/opt/homebrew/bin/fzf")
 
 vim.cmd("colorscheme gruvbox")
 
-vim.o.background = "dark" -- assume dark background
-
 vim.cmd([[
 
-set backspace=indent,eol,start	" backspace for dummys
 set linespace=0		        " No extra spaces between rows
 set nu                                " Line numbers on
 set showmatch                         " show matching brackets/parenthesis
-set incsearch	                        " find as you type search
-set hlsearch	                        " highlight search terms
 set ignorecase			" case insensitive search
 set smartcase                         " case sensitive when uc present
-set wildmenu                          " show list instead of just completing
 set wildmode=list:longest,full        " command <Tab> completion, list matches, then longest common part, then all.
 set whichwrap=b,s,h,l,<,>,[,]	        " backspace and cursor keys wrap to
 set scrolljump=5                      " lines to scroll when cursor leaves screen
@@ -36,10 +30,6 @@ set scrolloff=3                       " minimum lines to keep above and below cu
 set gdefault                          " the /g flag on :s substitutions by default
 
 set undofile              " Persistent undo (across files)
-
-
-" Load matchit (% to bounce from do to end, etc.)
-runtime! macros/matchit.vim
 
 set expandtab
 set ai sw=2 sts=2 et
@@ -51,7 +41,6 @@ autocmd FileType go setlocal noet ts=4 sw=4 sts=4
 " Force windows to be 80 char wide
 set numberwidth=4
 set winwidth=84
-
 
 let g:fzf_layout = { 'down': '~40%' }
 
@@ -77,9 +66,6 @@ if exists("$EXTRA_VIM")
     exec "source ".path
   endfor
 endif
-
-" TextEdit might fail if hidden is not set.
-set hidden
 
 " Some servers have issues with backup files, see #649.
 set nobackup
