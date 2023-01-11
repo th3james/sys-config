@@ -16,15 +16,18 @@ vim.opt.rtp:append("/opt/homebrew/bin/fzf")
 
 vim.cmd("colorscheme gruvbox")
 
+vim.o.background = "dark" -- assume dark background
+
+vim.o.linespace = 0 -- No extra spaces between rows
+vim.o.wildmode = "list:longest,full" -- Command-line completion mode
+vim.o.whichwrap = "b,s,h,l,<,>,[,]" -- backspace and cursor keys wrap to
+
 vim.cmd([[
 
-set linespace=0		        " No extra spaces between rows
 set nu                                " Line numbers on
 set showmatch                         " show matching brackets/parenthesis
 set ignorecase			" case insensitive search
 set smartcase                         " case sensitive when uc present
-set wildmode=list:longest,full        " command <Tab> completion, list matches, then longest common part, then all.
-set whichwrap=b,s,h,l,<,>,[,]	        " backspace and cursor keys wrap to
 set scrolljump=5                      " lines to scroll when cursor leaves screen
 set scrolloff=3                       " minimum lines to keep above and below cursor
 set gdefault                          " the /g flag on :s substitutions by default
