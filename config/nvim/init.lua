@@ -1,6 +1,11 @@
 require("plugins")
 require("lsp")
 
+-- jk instead of esc
+vim.keymap.set("i", "jk", "<Esc>", {noremap = true})
+-- colemak alternative
+vim.keymap.set("i", "uu", "<Esc>", {noremap = true})
+
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<Space>ff", builtin.find_files, {})
 vim.keymap.set("n", "<Space>fg", builtin.live_grep, {})
@@ -48,8 +53,6 @@ vim.cmd([[
 " Go
 autocmd FileType go setlocal noet ts=4 sw=4 sts=4
 
-let g:fzf_layout = { 'down': '~40%' }
-
 " Example docker transform
 "function! DockerTransform(cmd) abort
 "  return 'docker-compose run app '.a:cmd
@@ -59,11 +62,6 @@ let g:fzf_layout = { 'down': '~40%' }
 "let g:test#transformation = 'docker'
 
 "let test#python#runner = 'pytest'
-
-" jk instead of esc
-imap jk <Esc>
-" tarmak alternative
-imap hh <Esc>
 
 set statusline=%f%<\:%l\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
