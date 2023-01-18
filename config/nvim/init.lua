@@ -63,8 +63,8 @@ function PBCFullPath()
 end
 
 function PBCRelativePath()
-    local relative_path = vim.fn.expand("%")
-    os.execute("echo " .. relative_path .. " | pbcopy")
+	local relative_path = vim.fn.expand("%")
+	os.execute("echo " .. relative_path .. " | pbcopy")
 end
 
 vim.cmd([[
