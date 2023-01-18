@@ -55,15 +55,20 @@ vim.o.updatetime = 300
 
 vim.o.statusline = [[%f%<:%l %h%m%r%=%-14.(%l,%c%V%) %P]]
 
-vim.cmd([[
+vim.g.copilot_node_command = "~/.asdf/installs/nodejs/17.9.1/bin/node"
 
+function PBCFullPath()
+	local full_path = vim.fn.expand("%:p")
+	os.execute("echo " .. full_path .. " | pbcopy")
+end
+
+function PBCRelativePath()
+    local relative_path = vim.fn.expand("%")
+    os.execute("echo " .. relative_path .. " | pbcopy")
+end
+
+vim.cmd([[
 " Language specific settings
 " Go
 autocmd FileType go setlocal noet ts=4 sw=4 sts=4
-
-" Custom commands
-command PBCFullPath execute "!echo %:p | pbcopy"
-command PBCRelativePath execute "!echo % | pbcopy"
-
-let g:copilot_node_command = "~/.asdf/installs/nodejs/17.9.1/bin/node"
 ]])
