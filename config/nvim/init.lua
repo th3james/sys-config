@@ -2,9 +2,9 @@ require("plugins")
 require("lsp")
 
 -- jk instead of esc
-vim.keymap.set("i", "jk", "<Esc>", {noremap = true})
+vim.keymap.set("i", "jk", "<Esc>", { noremap = true })
 -- colemak alternative
-vim.keymap.set("i", "uu", "<Esc>", {noremap = true})
+vim.keymap.set("i", "uu", "<Esc>", { noremap = true })
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<Space>ff", builtin.find_files, {})
@@ -47,49 +47,19 @@ vim.o.undofile = true -- Persistent undo (across files)
 vim.o.numberwidth = 4 -- Always show 4 digits for line numbers
 vim.o.winwidth = 84 -- Force windows to be 80 char wide
 
+vim.o.signcolumn = "number" -- Always show sign column
+
+-- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+-- delays and poor user experience.
+vim.o.updatetime = 300
+
+vim.o.statusline = [[%f%<:%l %h%m%r%=%-14.(%l,%c%V%) %P]]
+
 vim.cmd([[
 
 " Language specific settings
 " Go
 autocmd FileType go setlocal noet ts=4 sw=4 sts=4
-
-" Example docker transform
-"function! DockerTransform(cmd) abort
-"  return 'docker-compose run app '.a:cmd
-"endfunction
-
-"let g:test#custom_transformations = {'docker': function('DockerTransform')}
-"let g:test#transformation = 'docker'
-
-"let test#python#runner = 'pytest'
-
-set statusline=%f%<\:%l\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-
-if exists("$EXTRA_VIM")
-  for path in split($EXTRA_VIM, ':')
-    exec "source ".path
-  endfor
-endif
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 
 " Custom commands
 command PBCFullPath execute "!echo %:p | pbcopy"
