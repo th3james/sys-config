@@ -47,7 +47,7 @@ vim.o.undofile = true -- Persistent undo (across files)
 vim.o.numberwidth = 4 -- Always show 4 digits for line numbers
 vim.o.winwidth = 84 -- Force windows to be 80 char wide
 
-vim.o.signcolumn = "number" -- Always show sign column
+vim.o.signcolumn = "yes" -- Always show sign column
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
