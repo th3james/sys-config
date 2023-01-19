@@ -73,6 +73,9 @@ if null_ls then
 					return get_venv_path("mypy")
 				end,
 			}),
+			null_ls.builtins.formatting.gofmt,
+			null_ls.builtins.formatting.goimports,
+			null_ls.builtins.diagnostics.golangci_lint,
 		},
 	})
 else
