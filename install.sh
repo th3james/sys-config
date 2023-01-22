@@ -1,3 +1,3 @@
-#!/usr/bin/env fish
+#!/usr/bin/env sh
 
-brew install fish nvim git ripgrep fzf
+brew install fish nvim git ripgrep fzf fd bat exa
