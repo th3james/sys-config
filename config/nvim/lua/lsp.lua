@@ -82,3 +82,7 @@ else
 	print("Could not find null-ls")
 	return nil
 end
+
+local rt = require("rust-tools")
+
+rt.setup()
