@@ -84,6 +84,8 @@ else
 	return nil
 end
 
+lspconfig.tsserver.setup({})
+
 local rt = require("rust-tools")
 
 rt.setup()
