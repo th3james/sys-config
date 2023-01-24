@@ -14,7 +14,12 @@ vim.keymap.set("n", "<Space>fh", builtin.help_tags, {})
 
 vim.keymap.set("n", "<Space>d", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "<Space>l", function()
-	vim.lsp.buf.format({ timeout_ms = 10000 })
+	vim.lsp.buf.format({
+		timeout_ms = 10000,
+		filter = function(client)
+			return client.name ~= "tsserver"
+		end, -- don't format with tsserver
+	})
 end, {})
 
 vim.opt.rtp:append("/opt/homebrew/bin/fzf")
