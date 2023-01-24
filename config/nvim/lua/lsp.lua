@@ -77,6 +77,7 @@ if null_ls then
 			null_ls.builtins.formatting.goimports,
 			null_ls.builtins.diagnostics.golangci_lint,
 			null_ls.builtins.formatting.jq,
+			null_ls.builtins.formatting.terraform_fmt,
 		},
 	})
 else
@@ -85,6 +86,7 @@ else
 end
 
 lspconfig.tsserver.setup({})
+lspconfig.terraformls.setup({})
 
 local rt = require("rust-tools")
 
