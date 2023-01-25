@@ -50,7 +50,6 @@ return require("packer").startup(function(use)
 	})
 
 	use("simrat39/rust-tools.nvim")
-	use("hashivim/vim-terraform")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
@@ -60,8 +59,4 @@ return require("packer").startup(function(use)
 end)
 
 -- Plugin list to port to packer.nvim
--- Plug 'hashivim/vim-terraform'
 -- Plug 'chr4/nginx.vim'
--- Plug 'ekalinin/Dockerfile.vim'
--- Plug 'cespare/vim-toml'
--- Plug 'dag/vim-fish'
