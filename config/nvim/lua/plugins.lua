@@ -34,6 +34,11 @@ return require("packer").startup(function(use)
 	use("github/copilot.vim")
 
 	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
+
+	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
 		requires = {
@@ -60,5 +65,3 @@ end)
 -- Plug 'ekalinin/Dockerfile.vim'
 -- Plug 'cespare/vim-toml'
 -- Plug 'dag/vim-fish'
--- Plug 'neovim/nvim-lspconfig'
--- Plug 'fatih/vim-go'

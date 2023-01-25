@@ -1,5 +1,6 @@
 require("plugins")
 require("lsp")
+require("highlight")
 
 -- jk instead of esc
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true })
