@@ -87,6 +87,7 @@ end
 
 lspconfig.tsserver.setup({})
 lspconfig.terraformls.setup({})
+lspconfig.gopls.setup({})
 
 local rt = require("rust-tools")
 
