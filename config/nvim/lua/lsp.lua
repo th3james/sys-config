@@ -80,6 +80,7 @@ if null_ls then
 			null_ls.builtins.formatting.terraform_fmt,
 			null_ls.builtins.formatting.cljstyle,
 			null_ls.builtins.diagnostics.clj_kondo,
+			null_ls.builtins.formatting.fnlfmt,
 		},
 	})
 else

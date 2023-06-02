@@ -51,6 +51,16 @@ return require("packer").startup(function(use)
 
 	use("simrat39/rust-tools.nvim")
 
+
+	use("jaawerth/fennel.vim")
+
+	-- Needed for conjure
+	use("tpope/vim-dispatch")
+	use("clojure-vim/vim-jack-in")
+	use("radenling/vim-dispatch-neovim")
+
+	use("Olical/conjure")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
