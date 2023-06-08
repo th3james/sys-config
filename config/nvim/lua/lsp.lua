@@ -7,7 +7,7 @@ end
 
 local null_ls = require("null-ls")
 
-local find_local = require("find_local")
+local local_tools = require("local_tools")
 
 if null_ls then
 	null_ls.setup({
@@ -27,25 +27,17 @@ if null_ls then
 				},
 			}),
 			null_ls.builtins.diagnostics.eslint.with({
-				command = function(params)
-					return find_local.get_npx_path("eslint")
-				end,
+				command = local_tools.eslint,
 			}),
 			null_ls.builtins.formatting.eslint.with({
-				command = function(params)
-					return find_local.get_npx_path("eslint")
-				end,
+				command = local_tools.eslint,
 			}),
 			null_ls.builtins.formatting.black.with({
-				command = function(params)
-					return find_local.get_venv_path("black")
-				end,
+				command = local_tools.black,
 			}),
 			null_ls.builtins.diagnostics.ruff,
 			null_ls.builtins.diagnostics.mypy.with({
-				command = function(params)
-					return find_local.get_venv_path("mypy")
-				end,
+				command = local_tools.mypy,
 			}),
 			null_ls.builtins.formatting.gofmt,
 			null_ls.builtins.formatting.goimports,

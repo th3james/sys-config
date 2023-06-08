@@ -7,7 +7,7 @@
     (if (= npx-path "")
         (do
           (logging.log-warning (.. "Could not find " executable-name
-                           " in npx, falling back to global"))
+                                   " in npx, falling back to global"))
           executable-name)
         (utils.trim_whitespace npx-path))))
 
@@ -17,7 +17,7 @@
     (if (= executable-path "")
         (do
           (logging.log-warning (.. "Could not find " executable-name
-                           " in virtual environment, will try system path"))
+                                   " in virtual environment, will try system path"))
           executable-name)
         (utils.trim_whitespace executable-path))))
 
