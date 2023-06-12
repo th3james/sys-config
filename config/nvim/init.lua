@@ -79,6 +79,8 @@ vim.o.statusline = [[%f%<:%l %h%m%r%=%-14.(%l,%c%V%) %P]]
 
 vim.g.copilot_node_command = "~/.asdf/installs/nodejs/17.9.1/bin/node"
 
+require("commands")
+
 function PBCFullPath()
 	local full_path = vim.fn.expand("%:p")
 	os.execute("echo " .. full_path .. " | pbcopy")
