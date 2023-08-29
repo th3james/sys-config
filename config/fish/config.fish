@@ -33,3 +33,6 @@ end
 # Use Docker Buildkit
 set -g DOCKER_BUILDKIT 1
 set -g COMPOSE_DOCKER_CLI_BUILD 1
+
+# 1Password CLI
+source /Users/jamcox01/.config/op/plugins.sh
