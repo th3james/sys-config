@@ -58,6 +58,7 @@ lspconfig.tsserver.setup({})
 lspconfig.terraformls.setup({})
 lspconfig.gopls.setup({})
 lspconfig.pyright.setup({})
+lspconfig.zls.setup({})
 
 local rt = require("rust-tools")
 
