@@ -77,7 +77,7 @@ vim.o.updatetime = 300
 
 vim.o.statusline = [[%f%<:%l %h%m%r%=%-14.(%l,%c%V%) %P]]
 
-vim.g.copilot_node_command = "~/.asdf/installs/nodejs/17.9.1/bin/node"
+vim.g.copilot_node_command = "~/.local/share/rtx/installs/node/17.9.1/bin/node"
 
 require("commands")
 

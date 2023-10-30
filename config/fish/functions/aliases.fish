@@ -20,5 +20,8 @@ abbr -a -g glp 'git log --graph --pretty=oneline --abbrev-commit'
 abbr -a -g kcnls 'kubectl get namespaces'
 abbr -a -g kcuc 'kubectl config use-context'
 
-# Ripgrep
+# Ripgrep #
 abbr -a -g rgf 'rg --files -g'
+
+# Eza #
+abbr -a -g es 'eza'

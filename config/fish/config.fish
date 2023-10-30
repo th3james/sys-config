@@ -12,21 +12,8 @@ set -gx fish_user_paths /opt/homebrew/sbin $fish_user_paths
 # set -g fish_user_paths "$HOME/.gem/ruby/2.6.0/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.config/bb/" $fish_user_paths
 
-# asdf
-
-if is_installed asdf
-  source (brew --prefix asdf)/libexec/asdf.fish
-else
-  echo "No asdf installed"
-end
-
 # Use ripgrep with fzf
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden -g \"!.git/\""
-
-
-if is_installed direnv
-  direnv hook fish | source
-end
 
 if is_installed zoxide
   zoxide init fish | source
@@ -38,3 +25,5 @@ set -g COMPOSE_DOCKER_CLI_BUILD 1
 
 # 1Password CLI
 source /Users/jamcox01/.config/op/plugins.sh
+
+rtx activate fish | source
