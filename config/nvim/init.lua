@@ -9,6 +9,7 @@ end
 require("hotpot")
 
 require("plugins")
+require("linters")
 require("lsp")
 require("highlight")
 

@@ -5,7 +5,7 @@ if not lspconfig then
 	return nil
 end
 
-local null_ls = require("null-ls")
+local null_ls = nil
 
 local local_tools = require("local_tools")
 

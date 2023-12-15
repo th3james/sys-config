@@ -16,14 +16,6 @@ return require("packer").startup(function(use)
 
 	use({
 		"neovim/nvim-lspconfig",
-		requires = {
-			{
-				"jose-elias-alvarez/null-ls.nvim",
-				requires = {
-					"nvim-lua/plenary.nvim",
-				},
-			},
-		},
 	})
 
 	use("morhetz/gruvbox")
