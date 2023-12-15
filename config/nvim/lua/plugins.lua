@@ -20,6 +20,8 @@ return require("packer").startup(function(use)
 
 	use("mfussenegger/nvim-lint")
 
+	use("mhartington/formatter.nvim")
+
 	use("morhetz/gruvbox")
 
 	use("tpope/vim-fugitive")
