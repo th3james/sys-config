@@ -1,6 +1,7 @@
 local configs = require("nvim-treesitter.configs")
 
 configs.setup({
+	ignore_install = { "help" },
 	ensure_installed = {
 		"c",
 		"dockerfile",
