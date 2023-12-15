@@ -18,6 +18,8 @@ return require("packer").startup(function(use)
 		"neovim/nvim-lspconfig",
 	})
 
+	use("mfussenegger/nvim-lint")
+
 	use("morhetz/gruvbox")
 
 	use("tpope/vim-fugitive")
