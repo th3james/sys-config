@@ -14,3 +14,5 @@ lspconfig.zls.setup({})
 local rt = require("rust-tools")
 
 rt.setup()
+
+vim.keymap.set("n", "<Space>d", "<Cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true })
