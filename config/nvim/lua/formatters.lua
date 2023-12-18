@@ -16,6 +16,16 @@ require("formatter").setup({
 			-- "lua" filetype
 			require("formatter.filetypes.lua").stylua,
 		},
+		clojure = {
+			function()
+				return {
+					exe = "cljstyle",
+					args = {
+						"fix",
+					},
+				}
+			end,
+		},
 	},
 })
 
