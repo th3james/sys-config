@@ -30,8 +30,10 @@ vim.keymap.set("n", "<Space>fG", function()
 end, {})
 vim.keymap.set("n", "<Space>fb", builtin.buffers, {})
 vim.keymap.set("n", "<Space>fh", builtin.help_tags, {})
+vim.keymap.set("n", "<Space>fd", builtin.lsp_definitions, {})
+vim.keymap.set("n", "<Space>fr", builtin.lsp_references, {})
+vim.keymap.set("n", "<Space>fe", builtin.diagnostics, {})
 
-vim.keymap.set("n", "<Space>d", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "<Space>l", function()
 	vim.lsp.buf.format({
 		timeout_ms = 10000,
