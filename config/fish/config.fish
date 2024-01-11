@@ -26,4 +26,4 @@ set -g COMPOSE_DOCKER_CLI_BUILD 1
 # 1Password CLI
 source /Users/jamcox01/.config/op/plugins.sh
 
-rtx activate fish | source
+mise activate fish | source
