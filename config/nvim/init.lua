@@ -34,15 +34,6 @@ vim.keymap.set("n", "<Space>fd", builtin.lsp_definitions, {})
 vim.keymap.set("n", "<Space>fr", builtin.lsp_references, {})
 vim.keymap.set("n", "<Space>fe", builtin.diagnostics, {})
 
-vim.keymap.set("n", "<Space>l", function()
-	vim.lsp.buf.format({
-		timeout_ms = 10000,
-		filter = function(client)
-			return client.name ~= "tsserver"
-		end, -- don't format with tsserver
-	})
-end, {})
-
 vim.opt.rtp:append("/opt/homebrew/bin/fzf")
 
 vim.cmd("colorscheme gruvbox")
