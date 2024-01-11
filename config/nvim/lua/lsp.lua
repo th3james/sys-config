@@ -11,6 +11,9 @@ lspconfig.gopls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.zls.setup({})
 
+require("arm_intrinsic_lsp")
+lspconfig.armlsp.setup({})
+
 local rt = require("rust-tools")
 
 rt.setup()
