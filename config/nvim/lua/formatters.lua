@@ -1,6 +1,3 @@
--- Utilities for creating configurations
-local util = require("formatter.util")
-
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
 require("formatter").setup({
 	-- Enable or disable logging
@@ -9,6 +6,12 @@ require("formatter").setup({
 	log_level = vim.log.levels.WARN,
 	-- All formatter configurations are opt-in
 	filetype = {
+		c = {
+			require("formatter.filetypes.c").clangformat,
+		},
+		cpp = {
+			require("formatter.filetypes.cpp").clangformat,
+		},
 		-- Formatter configurations for filetype "lua" go here
 		-- and will be executed in order
 		lua = {

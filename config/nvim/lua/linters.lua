@@ -1,6 +1,8 @@
 local lint = require("lint")
 
 lint.linters_by_ft = {
+	c = { "cppcheck" },
+	cpp = { "cppcheck" },
 	clojure = { "clj-kondo" },
 	lua = { "luacheck" },
 	javascript = { "eslint_d" },

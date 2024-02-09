@@ -7,6 +7,7 @@ end
 
 lspconfig.tsserver.setup({})
 -- lspconfig.terraformls.setup({})
+lspconfig.clangd.setup({})
 lspconfig.gopls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.zls.setup({})
