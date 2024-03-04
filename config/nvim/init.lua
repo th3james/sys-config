@@ -36,7 +36,7 @@ vim.keymap.set("n", "<Space>fe", builtin.diagnostics, {})
 
 vim.opt.rtp:append("/opt/homebrew/bin/fzf")
 
-vim.cmd("colorscheme gruvbox")
+vim.cmd.colorscheme("night-owl")
 
 vim.o.background = "dark" -- assume dark background
 

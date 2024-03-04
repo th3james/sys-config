@@ -22,7 +22,9 @@ return require("packer").startup(function(use)
 
 	use("mhartington/formatter.nvim")
 
+	-- themes
 	use("morhetz/gruvbox")
+	use("oxfist/night-owl.nvim")
 
 	use("tpope/vim-fugitive")
 	use("tpope/vim-rhubarb")
