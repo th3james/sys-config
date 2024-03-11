@@ -8,6 +8,7 @@ end
 -- Enable fnl/ support
 require("hotpot")
 
+require("options")
 require("plugins")
 require("formatters")
 require("linters")
@@ -34,45 +35,7 @@ vim.keymap.set("n", "<Space>fd", builtin.lsp_definitions, {})
 vim.keymap.set("n", "<Space>fr", builtin.lsp_references, {})
 vim.keymap.set("n", "<Space>fe", builtin.diagnostics, {})
 
-vim.opt.rtp:append("/opt/homebrew/bin/fzf")
-
 vim.cmd.colorscheme("night-owl")
-
-vim.o.background = "dark" -- assume dark background
-
-vim.o.linespace = 0 -- No extra spaces between rows
-vim.o.wildmode = "list:longest,full" -- Command-line completion mode
-vim.o.whichwrap = "b,s,h,l,<,>,[,]" -- backspace and cursor keys wrap to
-
-vim.o.scrolljump = 5 -- lines to scroll when cursor leaves screen
-vim.o.scrolloff = 3 -- minimum lines to keep above and below cursor
-
-vim.o.nu = true -- Line numbers on
-
-vim.o.expandtab = true -- Spaces instead of tabs
-vim.o.tabstop = 2 -- Number of spaces per tab
-vim.o.shiftwidth = 2 -- Number of spaces per tab
-vim.o.softtabstop = 2 -- Number of spaces per tab
-
-vim.o.showmatch = true -- show matching brackets/parenthesis
-vim.o.ignorecase = true -- case insensitive search
-vim.o.smartcase = true -- case sensitive when uc present
-vim.o.gdefault = true -- the /g flag on :s substitutions by default
-
-vim.o.undofile = true -- Persistent undo (across files)
-
-vim.o.numberwidth = 4 -- Always show 4 digits for line numbers
-vim.o.winwidth = 84 -- Force windows to be 80 char wide
-
-vim.o.signcolumn = "yes" -- Always show sign column
-
--- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
--- delays and poor user experience.
-vim.o.updatetime = 300
-
-vim.o.statusline = [[%f%<:%l %h%m%r%=%-14.(%l,%c%V%) %P]]
-
-vim.g.copilot_node_command = "~/.local/share/rtx/installs/node/17.9.1/bin/node"
 
 require("commands")
 
