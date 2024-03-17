@@ -5,9 +5,6 @@ if vim.fn.empty(vim.fn.glob(hotpot_path)) > 0 then
 	vim.cmd("helptags " .. hotpot_path .. "/doc")
 end
 
--- Enable fnl/ support
-require("hotpot")
-
 require("options")
 require("plugins")
 require("formatters")
@@ -19,7 +16,7 @@ require("keymaps")
 
 vim.cmd.colorscheme("night-owl")
 
-require("commands")
+-- require("commands")
 
 function PBCFullPath()
 	local full_path = vim.fn.expand("%:p")
