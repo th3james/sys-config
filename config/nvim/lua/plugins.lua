@@ -87,7 +87,7 @@ require("lazy").setup({
 		},
 	},
 	"jaawerth/fennel.vim",
-	--
+
 	{
 		"Olical/conjure",
 		dependencies = {

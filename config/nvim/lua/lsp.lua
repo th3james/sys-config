@@ -12,9 +12,9 @@ lspconfig.gopls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.zls.setup({})
 
-local rt = require("rust-tools")
+-- local rt = require("rust-tools")
 
-rt.setup()
+-- rt.setup()
 
 vim.keymap.set("n", "<Space>ld", "<Cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true })
 vim.keymap.set("n", "<Space>lf", function()
