@@ -10,7 +10,6 @@ require("plugins")
 require("formatters")
 require("linters")
 require("lsp")
-require("highlight")
 
 require("keymaps")
 
