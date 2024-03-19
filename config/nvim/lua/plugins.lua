@@ -54,6 +54,7 @@ require("lazy").setup({
 		config = function(_, opts)
 			-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 
+			-- @diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup(opts)
 
 			-- There are additional nvim-treesitter modules that you can use to interact
@@ -64,6 +65,7 @@ require("lazy").setup({
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
 	},
+
 	{
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
