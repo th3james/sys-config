@@ -1,5 +1,7 @@
 #!/usr/bin/env bb
-(require '[babashka.cli :as cli])
+(ns copy-as-markdown
+  (:require
+    [babashka.cli :as cli]))
 
 
 (let [file-path (first (:args (cli/parse-args *command-line-args*)))
