@@ -65,5 +65,4 @@ vim.keymap.set("n", "<Space>lf", function()
 		end, -- don't format with tsserver
 	})
 end, {})
-vim.keymap.set("n", "<Space>lh", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<Space>lr", vim.lsp.buf.rename, {})
