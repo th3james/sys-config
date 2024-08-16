@@ -6,7 +6,6 @@ if not lspconfig then
 end
 
 lspconfig.tsserver.setup({})
--- lspconfig.terraformls.setup({})
 lspconfig.clangd.setup({})
 lspconfig.gopls.setup({})
 -- brew install vscode-langservers-extracted
@@ -29,6 +28,8 @@ lspconfig.jsonls.setup({
 	},
 })
 lspconfig.pyright.setup({})
+-- brew install terraform-ls
+lspconfig.terraformls.setup({})
 -- brew install yaml-language-server
 lspconfig.yamlls.setup({
 	settings = {
