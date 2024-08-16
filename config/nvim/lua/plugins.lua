@@ -219,6 +219,14 @@ require("lazy").setup({
 	},
 
 	"ziglang/zig",
+
+	{
+		"ggandor/leap.nvim",
+		dependencies = { "tpope/vim-repeat" },
+		config = function()
+			require("leap").create_default_mappings()
+		end,
+	},
 })
 -- Plugin list to port to packer.nvim
 -- Plug 'chr4/nginx.vim'
