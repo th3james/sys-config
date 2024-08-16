@@ -22,7 +22,7 @@
 (defn main
   []
   (if (npm-installed?)
-    (install-packages "eslint_d typescript-language-server")
+    (install-packages "eslint eslint_d typescript-language-server")
     (println "npm not available.")))
 
 
