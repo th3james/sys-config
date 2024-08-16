@@ -1,6 +1,8 @@
 # Load aliases
 . "$HOME/.config/fish/functions/aliases.fish"
 
+set -gx TERM "xterm-kitty"
+
 set -gx EDITOR "nvim"
 git config --global core.editor nvim
 
@@ -22,8 +24,5 @@ end
 # Use Docker Buildkit
 set -g DOCKER_BUILDKIT 1
 set -g COMPOSE_DOCKER_CLI_BUILD 1
-
-# 1Password CLI
-source /Users/jamcox01/.config/op/plugins.sh
 
 mise activate fish | source
