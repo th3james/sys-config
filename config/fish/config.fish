@@ -10,9 +10,9 @@ git config --global core.editor nvim
 set -gx fish_user_paths (get_homebrew_path) $fish_user_paths
 set -gx fish_user_paths /opt/homebrew/sbin $fish_user_paths
 
-# set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
-# set -g fish_user_paths "$HOME/.gem/ruby/2.6.0/bin" $fish_user_paths
+set -gx fish_user_paths "$HOME/.config/bun-scripts/" $fish_user_paths
 set -gx fish_user_paths "$HOME/.config/bb/" $fish_user_paths
+set -gx fish_user_paths "$HOME/src/FVPs-on-Mac-cortex-a/bin" $fish_user_paths
 
 # Use ripgrep with fzf
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden -g \"!.git/\""
@@ -26,3 +26,7 @@ set -g DOCKER_BUILDKIT 1
 set -g COMPOSE_DOCKER_CLI_BUILD 1
 
 mise activate fish | source
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
