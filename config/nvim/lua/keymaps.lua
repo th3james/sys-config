@@ -1,3 +1,5 @@
+local utils = require("utils")
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -33,3 +35,5 @@ vim.keymap.set("n", "<Space>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<Space>fd", builtin.lsp_definitions, {})
 vim.keymap.set("n", "<Space>fr", builtin.lsp_references, {})
 vim.keymap.set("n", "<Space>fe", builtin.diagnostics, {})
+
+vim.keymap.set("n", "<Space>ly", utils.yank_file_with_path)
