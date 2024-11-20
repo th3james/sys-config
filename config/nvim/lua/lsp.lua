@@ -5,7 +5,7 @@ if not lspconfig then
 	return nil
 end
 
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})
 lspconfig.clangd.setup({})
 lspconfig.gopls.setup({})
 -- brew install vscode-langservers-extracted
