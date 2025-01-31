@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Common packages (same name in brew and apt)
 common_packages=(
