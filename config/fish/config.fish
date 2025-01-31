@@ -1,8 +1,6 @@
 # Load aliases
 . "$HOME/.config/fish/functions/aliases.fish"
 
-set -gx TERM "xterm-kitty"
-
 set -gx EDITOR "nvim"
 git config --global core.editor nvim
 
