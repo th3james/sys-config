@@ -8,8 +8,8 @@ git config --global core.editor nvim
 set -gx fish_user_paths (get_homebrew_path) $fish_user_paths
 set -gx fish_user_paths /opt/homebrew/sbin $fish_user_paths
 
+set -gx fish_user_paths "$HOME/src/sys-config/zig-scripts/zig-out/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.config/bun-scripts/" $fish_user_paths
-set -gx fish_user_paths "$HOME/.config/bb/" $fish_user_paths
 set -gx fish_user_paths "$HOME/src/FVPs-on-Mac-cortex-a/bin" $fish_user_paths
 
 # Use ripgrep with fzf
