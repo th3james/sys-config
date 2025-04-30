@@ -1,10 +1,5 @@
-vim/bundle/
-vim/plugged/
-config/.mono/
 config/configstore/
 config/omf/
-config/direnv/allow/
 config/nvim/.netrwhist
+config/nvim/lazy-lock.json
 config/fish/fish_variables
-config/fish/node_modules
-config/coc/

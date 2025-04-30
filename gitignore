@@ -32,3 +32,6 @@ Temporary Items
 tags
 # Persistent undo
 [._]*.un~
+
+# zig
+.zig-cache/
