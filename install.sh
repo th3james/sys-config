@@ -44,6 +44,7 @@ fi
 # Install fd with OS-specific name
 if [ "$os_name" = "darwin" ]; then
   install_brew fd
+  install_brew mise
 elif [ "$os_name" = "linux" ]; then
   install_apt fd-find
 fi
