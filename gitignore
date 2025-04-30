@@ -32,11 +32,3 @@ Temporary Items
 tags
 # Persistent undo
 [._]*.un~
-
-vim/plugged
-
-# asdf
-.tool-versions
-
-# Nova
-.nova/
