@@ -171,8 +171,6 @@ require("lazy").setup({
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 		},
 	},
-	"jaawerth/fennel.vim",
-
 	{
 		"Olical/conjure",
 		dependencies = {
@@ -202,33 +200,4 @@ require("lazy").setup({
 	},
 
 	"ziglang/zig",
-
-	{
-		"ggandor/leap.nvim",
-		dependencies = { "tpope/vim-repeat" },
-		config = function()
-			require("leap").create_default_mappings()
-		end,
-	},
 })
--- Plugin list to port to packer.nvim
--- Plug 'chr4/nginx.vim'
-
---
---	-- themes
---	use("morhetz/gruvbox")
---
---
---	use({
---		"nvim-telescope/telescope.nvim",
---		tag = "0.1.4",
---		requires = {
---			"nvim-lua/plenary.nvim",
---			{ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
---
---			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
---		},
---	})
---
---	use("simrat39/rust-tools.nvim")
---

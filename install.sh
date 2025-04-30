@@ -11,6 +11,8 @@ common_packages=(
   fish
   neovim
   zig
+  luacheck
+  stylua
 )
 
 # Detect OS
