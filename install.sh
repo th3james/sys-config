@@ -10,6 +10,7 @@ common_packages=(
   jq
   fish
   neovim
+  zig
 )
 
 # Detect OS
