@@ -36,4 +36,7 @@ vim.keymap.set("n", "<Space>fd", builtin.lsp_definitions, {})
 vim.keymap.set("n", "<Space>fr", builtin.lsp_references, {})
 vim.keymap.set("n", "<Space>fe", builtin.diagnostics, {})
 
-vim.keymap.set("n", "<Space>ly", utils.yank_file_with_path)
+vim.keymap.set("n", "<Space>yp", utils.yank_path)
+vim.keymap.set("n", "<Space>yl", utils.yank_line)
+vim.keymap.set("v", "<Space>yl", utils.yank_selection)
+vim.keymap.set("n", "<Space>yf", utils.yank_file_with_path)
