@@ -3,3 +3,4 @@ config/omf/
 config/nvim/.netrwhist
 config/nvim/lazy-lock.json
 config/fish/fish_variables
+config/karabiner/automatic_backups/
