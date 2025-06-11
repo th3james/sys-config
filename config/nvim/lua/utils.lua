@@ -27,7 +27,7 @@ function M.yank_line()
 	local line_content = vim.api.nvim_get_current_line()
 
 	local path_with_line_number = filepath .. ":" .. line_number
-	local result = path_with_line_number .. "\n```\n" .. line_content .. "\n```"
+	local result = path_with_line_number .. "\n```\n" .. line_content .. "\n```\n"
 	vim.fn.setreg("+", result)
 	vim.notify("Line yanked to clipboard: " .. path_with_line_number, vim.log.levels.INFO)
 end
@@ -75,7 +75,7 @@ function M.yank_selection()
 	end
 
 	-- Format the final string, consistent with other yank functions
-	local result = reference_path_with_lines .. "\n```\n" .. selected_content .. "\n```"
+	local result = reference_path_with_lines .. "\n```\n" .. selected_content .. "\n```\n"
 
 	vim.fn.setreg("+", result)
 	vim.notify("Selection yanked to clipboard: " .. reference_path_with_lines, vim.log.levels.INFO)
@@ -89,7 +89,7 @@ function M.yank_file_with_path()
 	end
 
 	local content = table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), "\n")
-	local formatted = filepath .. "\n```\n" .. content .. "\n```"
+	local formatted = filepath .. "\n```\n" .. content .. "\n```\n"
 	vim.fn.setreg("+", formatted)
 	vim.notify("File content yanked to clipboard: " .. filepath, vim.log.levels.INFO)
 end
