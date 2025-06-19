@@ -1,4 +1,4 @@
-# Code Style Preferences
+<Code Style Preferences>
 
 ## Core Philosophy:
 Strive for code that is **simple, performant, and robust**. When in doubt, err on the side of clarity and directness over premature or overly complex abstractions.
@@ -45,3 +45,15 @@ Organizing code well makes it easy to navigate, maintain, and extend. A logical 
 ## Dependency Management:
 
 * **Minimize external dependencies:** If a dependency is essential, prioritize those that are well-established, widely used, actively maintained, and have a proven track record of stability.
+<Code Style Preferences>
+
+<Tools>
+Assume the following tools are available for use:
+* [fish](https://fishshell.com/) is the default shell
+* [bun](https://bun.sh/)
+
+Python is not globally install. If you need to run Python, use astral-sh/uv:
+`uv run python -c "print('hello')"`
+
+Tools are otherwise managed by [mise](https://mise.jdx.dev/). Look in `mise.toml` to understand how environments are configured.
+</Tools>
