@@ -1,0 +1,11 @@
+[core]
+	excludesfile = ~/.config/git/ignore
+	editor = nvim
+[color]
+	ui = auto
+
+[includeIf "gitdir:~/src/personal/"]
+  path = ~/.config/git/config.personal
+
+[includeIf "gitdir:~/src/arm/"]
+  path = ~/.config/git/config.arm
