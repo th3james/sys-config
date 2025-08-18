@@ -11,14 +11,10 @@ set -gx fish_user_paths /opt/homebrew/sbin $fish_user_paths
 
 set -gx fish_user_paths "$HOME/src/sys-config/zig-scripts/zig-out/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.config/bun-scripts/" $fish_user_paths
-set -gx fish_user_paths "$HOME/src/FVPs-on-Mac-cortex-a/bin" $fish_user_paths
+set -gx fish_user_paths "$HOME/src/FVPs-on-Mac/bin" $fish_user_paths
 
 # Use ripgrep with fzf
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden -g \"!.git/\""
-
-if is_installed zoxide
-  zoxide init fish | source
-end
 
 # Use Docker Buildkit
 set -g DOCKER_BUILDKIT 1
