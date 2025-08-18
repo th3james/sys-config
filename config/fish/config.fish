@@ -1,8 +1,9 @@
 # Load aliases
 . "$HOME/.config/fish/functions/aliases.fish"
 
-set -gx EDITOR "nvim"
-git config --global core.editor nvim
+set -x EDITOR 'nvim'
+set -x VISUAL 'nvim'
+set -x MANPAGER 'nvim +Man!'
 
 # Homebrew path
 set -gx fish_user_paths (get_homebrew_path) $fish_user_paths
