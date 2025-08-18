@@ -17,7 +17,9 @@ cd sys-config
 # Install dependencies
 ./install.sh
 
-# Symlink
+# Or preview changes first
+./symlink.sh --dry-run
+
+# Symlink configs (safe to run multiple times)
 ./symlink.sh
 ```
-
