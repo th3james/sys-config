@@ -1,15 +1,9 @@
-local lspconfig = require("lspconfig")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("clangd")
+vim.lsp.enable("gopls")
 
-if not lspconfig then
-	print("Could not find lspconfig")
-	return nil
-end
-
-lspconfig.ts_ls.setup({})
-lspconfig.clangd.setup({})
-lspconfig.gopls.setup({})
 -- brew install vscode-langservers-extracted
-lspconfig.jsonls.setup({
+vim.lsp.config("jsonls", {
 	json = {
 		schemas = {
 			{
@@ -27,11 +21,13 @@ lspconfig.jsonls.setup({
 		},
 	},
 })
-lspconfig.basedpyright.setup({})
+vim.lsp.enable("jsonls")
+
+vim.lsp.enable("basedpyright")
 -- brew install terraform-ls
-lspconfig.terraformls.setup({})
+vim.lsp.enable("terraformls")
 -- brew install yaml-language-server
-lspconfig.yamlls.setup({
+vim.lsp.config("yamlls", {
 	settings = {
 		yaml = {
 			validate = true,
@@ -51,11 +47,21 @@ lspconfig.yamlls.setup({
 		},
 	},
 })
-lspconfig.zls.setup({})
+vim.lsp.enable("yamlls")
+vim.lsp.enable("zls")
 
--- local rt = require("rust-tools")
-
--- rt.setup()
+vim.lsp.config("rust_analyzer", {
+	settings = {
+		["rust-analyzer"] = {
+			cargo = {
+				allFeatures = true,
+			},
+			checkOnSave = {
+				command = "clippy",
+			},
+		},
+	},
+})
 
 vim.keymap.set("n", "<Space>ld", "<Cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true })
 vim.keymap.set("n", "<Space>lf", function()
