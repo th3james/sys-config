@@ -82,19 +82,11 @@ pub fn main() !void {
         }
         try stdout_writer.flush();
     } else if (!std.fs.File.stdin().isTty()) {
-        var stdin_buffer: [4096]u8 = undefined;
-        var stdin_reader_wrapper = std.fs.File.stdin().reader(&stdin_buffer);
-        const stdin_reader = &stdin_reader_wrapper.interface;
+        const MAX_STDIN_LEN = 50_000_000;
+        const stdin_content = try std.fs.File.stdin().readToEndAlloc(allocator, MAX_STDIN_LEN);
+        defer allocator.free(stdin_content);
 
-        while (true) {
-            const line = stdin_reader.takeDelimiterExclusive('\n') catch |err| switch (err) {
-                error.EndOfStream => break,
-                else => return err,
-            };
-            const owned_path = try allocator.dupe(u8, line);
-            defer allocator.free(owned_path);
-            try convert_file(allocator, owned_path, stdout_writer);
-        }
+        try convert_html(allocator, stdin_content, stdout_writer);
         try stdout_writer.flush();
     } else {
         std.debug.print("Usage: html_to_markdown <file>...\n", .{});
