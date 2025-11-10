@@ -50,7 +50,6 @@ Organizing code well makes it easy to navigate, maintain, and extend. A logical 
 <Tools>
 Assume the following tools are available for use:
 * [fish](https://fishshell.com/) is the default shell
-* [bun](https://bun.sh/)
 
 Python is not globally install. If you need to run Python, use astral-sh/uv:
 `uv run python -c "print('hello')"`

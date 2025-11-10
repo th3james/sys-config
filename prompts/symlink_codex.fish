@@ -6,7 +6,7 @@
 set target_file "$HOME/src/sys-config/prompts/conventions.md"
 
 # Define the symlink name
-set symlink_name "$HOME/.codex/instructions.md"
+set symlink_name "$HOME/.codex/AGENTS.md"
 
 # Define the directory for the symlink
 set symlink_dir (dirname "$symlink_name")
