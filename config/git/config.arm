@@ -1,3 +1,7 @@
 [user]
   name = James Cox-Morton
   email = james.cox-morton@arm.com
+[commit]
+  gpgsign = true
+[user]
+  signingkey = 274829E416CDBC0FA526FBB1AE0729FF3F76FB6C

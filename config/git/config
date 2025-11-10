@@ -9,3 +9,5 @@
 
 [includeIf "gitdir:~/src/arm/"]
   path = ~/.config/git/config.arm
+[gpg]
+	program = /opt/homebrew/bin/gpg
