@@ -4,7 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const scripts = [_][]const u8{"cat_markdown"};
+    const scripts = [_][]const u8{ "cat_markdown", "html_to_markdown" };
 
     inline for (scripts) |script| {
         const root_module = b.createModule(.{
