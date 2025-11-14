@@ -7,6 +7,7 @@ abbr -a -g gst git status
 abbr -a -g gsm 'git switch (gmom)'
 abbr -a -g gsw git switch
 abbr -a -g gd git diff
+abbr -a -g grt git restore
 abbr -a -g gc git commit -v
 abbr -a -g gfm 'git fetch; git merge --ff-only'
 abbr -a -g gfr 'git fetch; git rebase'
