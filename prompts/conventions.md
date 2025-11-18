@@ -45,7 +45,7 @@ Organizing code well makes it easy to navigate, maintain, and extend. A logical 
 ## Dependency Management:
 
 * **Minimize external dependencies:** If a dependency is essential, prioritize those that are well-established, widely used, actively maintained, and have a proven track record of stability.
-<Code Style Preferences>
+</Code Style Preferences>
 
 <Tools>
 Assume the following tools are available for use:
