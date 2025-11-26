@@ -35,3 +35,5 @@ tags
 
 # zig
 .zig-cache/
+
+**/.claude/settings.local.json
