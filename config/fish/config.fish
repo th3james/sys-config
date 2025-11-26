@@ -16,8 +16,4 @@ set -gx GPG_TTY (tty)
 # Use ripgrep with fzf
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden -g \"!.git/\""
 
-# Use Docker Buildkit
-set -g DOCKER_BUILDKIT 1
-set -g COMPOSE_DOCKER_CLI_BUILD 1
-
 mise activate fish | source
