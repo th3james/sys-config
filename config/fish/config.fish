@@ -5,14 +5,15 @@ set -x EDITOR 'nvim'
 set -x VISUAL 'nvim'
 set -x MANPAGER 'nvim +Man!'
 
-# Homebrew path
-set -gx fish_user_paths (get_homebrew_path) $fish_user_paths
-set -gx fish_user_paths /opt/homebrew/sbin $fish_user_paths
-
-set -gx fish_user_paths "$HOME/.local/bin" $fish_user_paths
-set -gx fish_user_paths "$HOME/src/sys-config/zig-scripts/zig-out/bin" $fish_user_paths
-set -gx fish_user_paths "$HOME/.config/bun-scripts/" $fish_user_paths
-set -gx fish_user_paths "$HOME/src/FVPs-on-Mac/bin" $fish_user_paths
+# Add custom paths (in reverse priority order)
+set -gx fish_user_paths \
+    "$HOME/src/FVPs-on-Mac/bin" \
+    "$HOME/.config/bun-scripts/" \
+    "$HOME/src/sys-config/zig-scripts/zig-out/bin" \
+    "$HOME/.local/bin" \
+    /opt/homebrew/sbin \
+    (get_homebrew_path) \
+    $fish_user_paths
 
 set -gx GPG_TTY (tty)
 
