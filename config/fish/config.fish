@@ -8,7 +8,6 @@ set -x MANPAGER 'nvim +Man!'
 # Add custom paths (in reverse priority order)
 set -gx fish_user_paths \
     "$HOME/src/FVPs-on-Mac/bin" \
-    "$HOME/.config/bun-scripts/" \
     "$HOME/src/sys-config/zig-scripts/zig-out/bin" \
     "$HOME/.local/bin" \
     /opt/homebrew/sbin \
@@ -25,7 +24,3 @@ set -g DOCKER_BUILDKIT 1
 set -g COMPOSE_DOCKER_CLI_BUILD 1
 
 mise activate fish | source
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
