@@ -1,6 +1,3 @@
-# Load aliases
-. "$HOME/.config/fish/functions/aliases.fish"
-
 set -x EDITOR 'nvim'
 set -x VISUAL 'nvim'
 set -x MANPAGER 'nvim +Man!'
